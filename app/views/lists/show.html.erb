@@ -1,6 +1,6 @@
 <h1>List</h1>
 <h3><strong><%= @list.name %></strong></h4>
-<%= link_to "+ Add a bookmark", new_list_bookmark_path(@list) %>
+<%= link_to "+ Add a bookmark", new_list_bookmark_path(@list), class: "btn btn-primary" %>
 
 <p>
 <% @list.bookmarks.each do |bookmark| %>
@@ -11,12 +11,12 @@
   <% end %>
 </h5>
 <p>Movie details</p>
-<ul>
-  <li>title: <strong><%= bookmark.movie.title %></strong></li>
-  <li>overview: <%= bookmark.movie.overview %></li>
-  <li>rating: <%= bookmark.movie.rating %></li>
-  <li><img src="<%= bookmark.movie.poster_url %>" alt="poster_url" width="300px"></li>
+<ul class="list-group">
+  <li class="list-group-item">title: <strong><%= bookmark.movie.title %></strong></li>
+  <li class="list-group-item">overview: <%= bookmark.movie.overview %></li>
+  <li class="list-group-item">rating: <%= bookmark.movie.rating %></li>
+  <li class="list-group-item"><img src="<%= bookmark.movie.poster_url %>" alt="poster_url" width="300px"></li>
 </ul>
 <% end %>
 </p>
-<p><%= link_to "Back to list", lists_path %></p>
+<p><%= link_to "Back to list", lists_path, class: "btn btn-primary" %></p>

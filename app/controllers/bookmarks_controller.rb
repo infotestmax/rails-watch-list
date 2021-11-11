@@ -13,6 +13,7 @@ class BookmarksController < ApplicationController
     if @bookmark.save
       redirect_to list_path(@list)
     else
+      @movies = Movie.all
       render :new
     end
   end

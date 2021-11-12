@@ -1,8 +1,8 @@
 <h1>Lists</h1>
 <p>
-<ul>
+<ul class="list-group">
 <% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list) %></li>
+  <li class="list-group-item"><%= link_to list.name, list_path(list) %></li>
 <% end %>
 </ul>
 </p>
